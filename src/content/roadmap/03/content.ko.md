@@ -1,10 +1,11 @@
 ---
-step_title: <strike>2022 H2</strike> <i>any week now!</i><br><a class="underline hover:no-underline" target="_blank" href="https://github.com/orgs/vegaprotocol/projects/125/views/2">See what's left</a>
-title: Alpha Mainnet
+step_title: 2023 상반기
+title: 알파 메인넷
 ---
 
-## Trade cash settled futures
+## 알파 메인넷 네트워크가 출시되었습니다!
 
-- Create permissionless markets
-- Buy and sell futures contracts on the Vega blockchain with community controlled limits
-- Test integrations with live projects and protocols
+- 현금 결제 선물 출시
+- 완전 탈중앙화된 익명 거래
+- 완전한 교차 마진을 통한 레버리지 거래
+- 무허가 시장 생성

@@ -4,6 +4,7 @@ import Button from './UI/Button'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import { stringify } from 'querystring'
+import { getImage, getSrc } from 'gatsby-plugin-image'
 
 const LatestNews = () => {
   const { t } = useTranslation('component.latest-news')
@@ -48,6 +49,11 @@ const LatestNews = () => {
                 title
                 link
               }
+              featuredImage {
+                childImageSharp {
+                  gatsbyImageData(layout: CONSTRAINED, width: 640)
+                }
+              }
             }
             fields {
               slug
@@ -91,13 +97,18 @@ const LatestNews = () => {
 
   useEffect(() => {
     async function fetchLatestTweet() {
-      let response = await fetch('/.netlify/functions/latest-tweet')
-      response = await response.json()
-      setTweet({
-        id: response.id,
-        text: response.tweet_text,
-        image: response.image,
-      })
+      try {
+        const functionPath = '/api/latest-tweet'
+        let response = await fetch(functionPath)
+        response = await response.json()
+        setTweet({
+          id: response.id,
+          text: response.tweet_text,
+          image: response.image,
+        })
+      } catch (e) {
+        console.error('Error fetching latest tweet')
+      }
     }
     fetchLatestTweet()
   }, [])
@@ -158,6 +169,13 @@ const LatestNews = () => {
               .split(' ')
               .splice(0, 25)
               .join(' ')}...`}
+            image={
+              latestPosts.talks.edges[0].node.frontmatter.featuredImage
+                ? getSrc(
+                    latestPosts.talks.edges[0].node.frontmatter.featuredImage
+                  )
+                : undefined
+            }
             date={latestPosts.talks.edges[0].node.frontmatter.date}
             link={`/talks#talk${latestPosts.talks.edges[0].node.fields.slug}`}
             className="mb-space-5"
@@ -178,6 +196,13 @@ const LatestNews = () => {
               .splice(0, 25)
               .join(' ')}...`}
             link={latestPosts.insights.edges[0].node.frontmatter.links[0].url}
+            image={
+              latestPosts.insights.edges[0].node.frontmatter.featuredImage
+                ? getSrc(
+                    latestPosts.insights.edges[0].node.frontmatter.featuredImage
+                  )
+                : undefined
+            }
             date={latestPosts.insights.edges[0].node.frontmatter.date}
             className="mb-space-5"
           />

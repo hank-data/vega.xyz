@@ -22,6 +22,18 @@ const Develop = () => {
             text={t('Documentation')}
             link="https://docs.vega.xyz"
           />
+          <NavigationItem
+            text={t('Tutorials')}
+            link="https://docs.vega.xyz/mainnet/tutorials"
+          />
+          <NavigationItem
+            text={t('API documentation')}
+            link="https://docs.vega.xyz/mainnet/api/overview"
+          />
+          <NavigationItem
+            text={t('Programmatic trading')}
+            link="/programmatic-trading"
+          />
         </NavigationList>
       </div>
       <div>

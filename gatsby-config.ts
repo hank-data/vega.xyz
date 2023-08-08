@@ -23,6 +23,10 @@ const languages = [
     code: 'ko',
     localName: '한국인',
   },
+  {
+    code: 'vi',
+    localName: 'Tiếng Việt',
+  },
 ]
 
 module.exports = {
@@ -43,15 +47,7 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-plugin-anchor-links`,
-      options: {
-        duration: 1500,
-        offset: -100,
-      },
-    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

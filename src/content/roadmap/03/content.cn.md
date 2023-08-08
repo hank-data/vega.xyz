@@ -1,10 +1,11 @@
 ---
-step_title: <strike>2022 H2</strike> <i>any week now!</i><br><a class="underline hover:no-underline" target="_blank" href="https://github.com/orgs/vegaprotocol/projects/125/views/2">See what's left</a>
-title: Alpha Mainnet
+step_title: 2023 H1
+title: Alpha 主网
 ---
 
-## Trade cash settled futures
+## Alpha 主网网络已上线！
 
-- Create permissionless markets
-- Buy and sell futures contracts on the Vega blockchain with community controlled limits
-- Test integrations with live projects and protocols
+- 现已上线现金结算期货交易
+- 完全去中心化的匿名交易
+- 全部交叉保证金的杠杆交易
+- 无需许可的市场创建

@@ -1,10 +1,9 @@
 ---
 step_title: 2023 H2
-title: Version 1 Mainnet
+title: Первая версия Майннет
 ---
 
-## Final launch phase
-
-- Temporary limits lifted through governance
-- New innovations and improvements from feedback e.g. spot markets, perpetuals, passive liquidity, Ethereum oracles
-- New bridges to other blockchains and/or L2s
+## Заключительный этап запуска
+- Снятие временных ограничений посредством управления сообществом
+- Новые инновации и усовершенствования по результатам обратной связи, например, рынки-преемники, передача управления, стоп ордера и айсберг ордера
+- Внедрение спот-рынков, вечных контрактов, SLA ликвидности, Ethereum-оракулов и разделение маржи
